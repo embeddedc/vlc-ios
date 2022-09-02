@@ -289,7 +289,7 @@
 
     if (recentURLs.count >= 100)
         [recentURLs removeLastObject];
-    [recentURLs addObject:urlString];
+    [recentURLs insertObject:urlString atIndex:0];
 
     /* sync back */
     [ubiquitousKeyValueStore setArray:recentURLs forKey:kVLCRecentURLs];

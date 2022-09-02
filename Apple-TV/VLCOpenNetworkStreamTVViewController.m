@@ -154,7 +154,7 @@
 
         if (_recentURLs.count >= 100)
             [_recentURLs removeLastObject];
-        [_recentURLs addObject:urlString];
+        [_recentURLs insertObject:urlString atIndex:0];
         [[NSUbiquitousKeyValueStore defaultStore] setArray:_recentURLs forKey:kVLCRecentURLs];
 
         [self _openURLStringAndDismiss:urlString];
